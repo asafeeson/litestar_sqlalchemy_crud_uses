@@ -4,6 +4,12 @@ import base64
 import hmac
 from core.logging import get_logger
 
+"""
+hashlib is not the best solution for hashing passwords. But
+because all dependencies were predefined in the task, I deciced not
+to add new ones. But if I could - I'd prefer to use bcrypto lib 
+to hash passwords or any other sensitive values.
+"""
 
 log = get_logger('authentication')
 
