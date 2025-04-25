@@ -3,7 +3,7 @@ from advanced_alchemy.base import BigIntAuditBase
 from sqlalchemy.orm import Mapped, mapped_column
 
 
-class User(BigIntAuditBase):
+class UserModel(BigIntAuditBase):
     __tablename__ = "user"
     name: Mapped[str]
     surname: Mapped[str]
