@@ -1,6 +1,7 @@
 import os
 import hashlib
 import base64
+import hmac
 from core.logging import get_logger
 
 
@@ -25,7 +26,7 @@ def verify_password(password: str, stored_hash: str) -> bool:
         salt = base64.b64decode(salt_b64)
         stored_key = base64.b64decode(key_b64)
         new_key = hashlib.pbkdf2_hmac(HASH_ALGO, password.encode('utf-8'), salt, iterations)
-        return stored_key == new_key
+        return hmac.compare_digest(stored_key, new_key)
         
     except Exception as e:
         log.error(e)
