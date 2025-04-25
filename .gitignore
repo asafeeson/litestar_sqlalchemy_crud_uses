@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info
+.pytest_cache/
+.coverage
+coverage.xml
+dist/
+build/
+sdist/
+wheelhouse/
+*.manifest
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Litestar
+.litestar/
+
+# SQLAlchemy (может включать файлы SQLite, если используются)
+*.sqlite
+instance/  # Flask/SQLAlchemy часто использует папку instance
+
+# Logs
+*.log
+
+# Testing
+nosetests.xml
+*.tox
+.test*
+
+# Development Tools
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# OS Specific
+Thumbs.db
+
+# Packages
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+
+# Others
+.env
+.python-version
